@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #d1c8d8;
+    --text-dark: #9b9292;
+    --text-light: #acb36233;
+    --extra-light: #bed0f3;
+
+    --max-width: 1300px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--extra-light);
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('bg.jpg');
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+}
+
+.nav__bar__unique {
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--primary-color);
+}
+
+.nav_menu_btn__unique {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links__unique {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.nav__links__unique li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+    color: white;
+}
+
+.nav__links__unique .link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--extra-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav__links__unique .link:hover {
+    color: var(--primary-color);
+}
+
+.container__unique {
+    display: flex;
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem;
+    padding-top: 25%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__grid__unique {
+    position: relative;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    padding-top: 8rem;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.container__content__unique {
+    text-align: center;
+}
+
+.container__content__unique h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 5rem;
+    color: var(--primary-color);
+}
+
+.container__content__unique h2 {
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    max-width: 450px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--white);
+}
+
+.container__content__unique p {
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    max-width: 400px;
+    color: var(--white);
+}
+
+.socials__unique>div {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 50px;
+}
+
+.socials__unique a {
+    padding: 2px 7px;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 100%;
+    transition: 0.3s;
+
+}
+
+.socials__unique a:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.socials__unique span {
+    font-size: 1.1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.team-section,
+.project-section {
+    text-align: center;
+}
+
+.team-members,
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-member,
+.project {
+    background-color: var(--extra-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover,
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img,
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.zigzag {
+    position: relative;
+    overflow: hidden;
+}
+
+.zigzag:before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background-color: var(--primary-color);
+    top: -20%;
+    left: -50%;
+    transform: rotate(-25deg);
+    z-index: -1;
+}
+
+.experience {
+    margin-top: 4rem;
+}
+
+.experience-text {
+    max-width: 700px;
+    margin-inline: auto;
+    color: var(--text-dark);
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .nav__links__unique {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        gap: 3rem;
+      }
+
+    .container__unique {
+        padding-top: 35%;
+    }
+
+    .container__content__unique h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .container__content__unique h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .container__content__unique p {
+        max-width: 300px;
+    }
+
+    .team-members,
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .team-member img,
+    .project img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 627px) {
+    .nav__bar__unique {
+       gap:0.5rem;
+    }
+    nav{
+        display:flex;
+        flex-direction: column;
+       gap :20px;
+    }
+    .container__unique {
+        padding-top: 40%;
+    }
+}
+@media only screen and (max-width: 480px) {
+
+    .container__content__unique h1 {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+
+    .nav__bar__unique {
+        padding: 0.5rem 1rem;
+    }
+
+    .container__content__unique h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .container__content__unique h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .container__content__unique p {
+        max-width: 250px;
+    }
+
+    .socials__unique a {
+        padding: 2px 5px;
+    }
+
+    .team-member img,
+    .project img {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .nav__links__unique{
+        gap :1.2rem;
+     }
+     .container__unique {
+        padding-top: 50%;
+    }
+    .container__content__unique h1 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+     }
